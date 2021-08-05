@@ -3,7 +3,7 @@
 # install system deps
 if [ $(which apt-get) ]; then
   echo "installing deps for ubuntu"
-  sudo apt-get -y install git curl python python-dev python3-pip build-essential pkg-config zlib1g-dev libglib2.0-dev libpixman-1-dev
+  sudo apt-get -y install git curl python3 python3-dev python3-pip build-essential pkg-config zlib1g-dev libglib2.0-dev libpixman-1-dev libjpeg-dev
   sudo pip3 install virtualenv 
  
 else
@@ -30,8 +30,8 @@ fi
 echo "building python venv"
 virtualenv venv
 source venv/bin/activate
-pip install --upgrade pip
-pip install --upgrade -r requirements.txt
+pip3 install --upgrade pip
+pip3 install --upgrade -r requirements.txt
 
 echo "running tests"
 ./run_tests.sh

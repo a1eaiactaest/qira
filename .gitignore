@@ -10,7 +10,6 @@ ida/libwebsockets.a
 tests/idb
 old/qiradb/qiradb
 db/
-qemu/qemu-2*
 distrib/
 qiradb/build
 cda/include
